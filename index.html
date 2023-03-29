@@ -114,11 +114,11 @@
                 </div>
             </div>
         </header>
-        <div class="menu-bar">
+        <div class="menu-barthree">
             <div class="container">
                 <div class="menu-bartwo">
                     <img src="./image/logo.png" alt="">
-                    <a href="#"><img src="./image/menu.png" alt="icon"></a>
+                    <div class="humbger-menu"><img src="./image/menu.png" alt="icon"></div>
                 </div>
             </div>
         </div>
@@ -936,5 +936,90 @@
                 </div>
             </div>
         </div>
+        <div class="mobile-menu">
+            <div class="mobmenu-top">
+              <a href="#">
+                <img src="./image/logo.png" alt="logo" />
+              </a>
+              <div class="close">&times;</div>
+            </div>
+            <ul>
+              <li>
+                <a class="menu-bar" href="">Home
+                </a>
+              </li>
+              <li>
+                <a class="menu-bar" href="#">Company</a>
+                <div class="sign">
+                    <ul>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li>
+                <a class="menu-bar" href="">Service
+                </a>
+              </li>
+              <li>
+                <a class="menu-bar" href="">Pages
+                </a>
+              </li>
+              <li>
+                <a class="menu-bar" href="">Elements
+                </a>
+              </li>
+              <li>
+                <a class="menu-bar" href="">Blog
+                </a>
+              </li>
+              <li>
+                <div class="menu-bartwo">
+                    Contact
+                    <img src="./images/right-arrow.png" alt="" />
+                </div>
+                <div class="signtwo">
+                    <ul>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                        <li><a href="">home</a></li>
+                    </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="overlaythree"></div>
     </body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".humbger-menu").click(function () {
+        $(".mobile-menu").show("slide, right, 500");
+        $(".overlaythree").show("slide, right, 500");
+        $("body").css('overflow', 'hidden');
+        $("body").addClass('test');
+
+
+      });
+      $(".close, .overlaythree").click(function () {
+        $(".mobile-menu").hide("slide, right, 500");
+        $(".overlaythree").hide("slide, right, 500");
+        $("body").css('overflow', 'auto');
+        $("body").removeClass();
+      });
+      $(".menu-bar").click(function () {
+        $(".sign").toggle("slide, right, 500");
+      });
+      $(".menu-bartwo").click(function () {
+        $(".signtwo").toggle("slide, right, 500");
+      });
+    });
+  </script>
 </html>
